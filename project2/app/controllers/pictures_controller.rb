@@ -1,6 +1,11 @@
 class PicturesController < ApplicationController
   def index
     @picture = Picture.all
+    prng = Random.new
+    @rand_pic = @picture[prng.rand(Picture.count)]
+
+    puts Picture.count
+    puts "=================="
   end
 
   def show
