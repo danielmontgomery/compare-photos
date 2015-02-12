@@ -1,0 +1,7 @@
+<h1>Pictures#index</h1>
+<p>Find me in app/views/pictures/index.html.erb</p>
+
+<% @picture.each do |p| %>
+	<%= image_tag p.pic.url %><br>
+	<%= p.caption %><br><br>
+<% end %>
