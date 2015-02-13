@@ -3,6 +3,7 @@ class PicturesController < ApplicationController
     @picture = Picture.all
     prng = Random.new
     @rand_pic = @picture[prng.rand(Picture.count)]
+    @rand_pic2 = @picture[prng.rand(Picture.count)]
 
     puts Picture.count
     puts "=================="
