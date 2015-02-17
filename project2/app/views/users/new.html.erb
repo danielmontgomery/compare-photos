@@ -3,6 +3,8 @@
 
 <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
 	Your Username: <%= f.text_field :username %><br />
+	Your Password: <%= f.password_field :password %><br />
+	Password Again: <%= f.password_field :password_confirmation %>
 	Profile Picture: <%= f.file_field :avatar %><br />
 	<%= f.submit %>
 <% end %>
