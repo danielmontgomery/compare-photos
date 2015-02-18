@@ -30,13 +30,19 @@ class PicturesController < ApplicationController
   end
 
   def update
-    @rand_pic.increment(:score)
+    if 
+    Picure.update(params.require(:picture).permit(:pic, :caption, :score))
+        # picture = Picture.find(params[:id])
+        # (params.require(:picture).permit(:pic, :caption, :score))
+    end
+    if picture.save
+      redirect_to pictures_path
+    end
   end
 
   def destroy
   end
 end
-
 
 # THIS WORKS:
 # @rand_pic.increment(:score)
